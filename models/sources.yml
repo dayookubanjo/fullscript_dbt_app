@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: fullscript
+    database: snowflake_sample_data
+    schema: tpch_sf1
+    tables:
+      - name: region
+        identifier: region
+        description: Information about all regions in Snowflake's sample database.
+      - name: nation
+        identifier: nation
+        description: Information about all nations in Snowflake's sample database.
+      - name: customer
+        identifier: customer
+        description: Information about all customers in Snowflake's sample database.
+      - name: orders
+        identifier: orders
+        description: Information about all orders in Snowflake's sample database.
+ 

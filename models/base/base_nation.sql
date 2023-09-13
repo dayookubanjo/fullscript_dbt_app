@@ -1,0 +1,6 @@
+SELECT 
+N_NATIONKEY AS NATION_ID,
+N_NAME AS NATION_NAME,
+N_REGIONKEY AS REGION_ID
+FROM 
+{{ source('fullscript', 'nation')}}

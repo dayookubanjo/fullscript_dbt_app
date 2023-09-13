@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: Dimension table containing all customer information.
+    columns:
+      - name: customer_id
+        description: Primary key for dim_customer.
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_orders
+    description: Fact table containing all customer orders.
+    columns:
+      - name: order_id
+        description: Primary key for fact_orders.
+        tests:
+          - unique
+          - not_null 
+      - name: customer_id
+        description: The customer's id. References dim_customer table.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+ 
